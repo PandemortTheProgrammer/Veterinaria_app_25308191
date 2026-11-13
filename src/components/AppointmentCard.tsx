@@ -13,6 +13,9 @@ export function AppointmentCard({ cita, onConfirmar }: Props) {
             <StatusBadge estado={cita.estado} />
           </div>
           <p className="mt-2 text-sm text-slate-600">Cliente: {cita.cliente}</p>
+          {cita.fecha && (
+            <p className="text-sm text-slate-600">Fecha: {cita.fecha}</p>
+          )}
           <p className="text-sm text-slate-600">{cita.servicio} · {cita.hora}</p>
         </div>
 
@@ -28,4 +31,3 @@ export function AppointmentCard({ cita, onConfirmar }: Props) {
     </article>
   );
 }
-
